@@ -43,6 +43,7 @@ const translations = {
       ],
     },
     home: {
+      pageTitle: "Home",
       hero: {
         heading: "Transform Your Relationships",
         subheading:
@@ -83,6 +84,7 @@ const translations = {
       },
     },
     aboutImago: {
+      pageTitle: "About Imago",
       hero: {
         heading: "About Imago",
         subheading:
@@ -115,6 +117,7 @@ const translations = {
       },
     },
     about: {
+      pageTitle: "About",
       hero: {
         heading: "Sophie Slade",
         subheading: "Imago Trainings and Workshops",
@@ -150,6 +153,7 @@ const translations = {
       },
     },
     book: {
+      pageTitle: "Book",
       hero: {
         heading: "Book",
         text: "Discover the power of authentic connection through Imago Therapy",
@@ -208,6 +212,7 @@ const translations = {
       },
     },
     workshopsPage: {
+      pageTitle: "Workshops",
       hero: {
         heading: "Workshops & Events",
         text: "Transformative experiences designed to enhance connection and create lasting relationship change.",
@@ -288,6 +293,7 @@ const translations = {
       ],
     },
     trainingsPage: {
+      pageTitle: "Trainings",
       hero: {
         heading: "Training Programs",
         text: "Comprehensive training programs for therapists and individuals interested in Imago methodology.",
@@ -425,6 +431,7 @@ const translations = {
       ],
     },
     home: {
+      pageTitle: "Accueil",
       hero: {
         heading: "Transformez vos relations",
         subheading:
@@ -490,6 +497,7 @@ const translations = {
       },
     },
     aboutImago: {
+      pageTitle: "A propos d'Imago",
       hero: {
         heading: "À propos d'Imago",
         subheading:
@@ -522,6 +530,7 @@ const translations = {
       },
     },
     about: {
+      pageTitle: "A propos",
       hero: {
         heading: "Sophie Slade",
         subheading: "Formations et ateliers Imago",
@@ -557,6 +566,7 @@ const translations = {
       },
     },
     book: {
+      pageTitle: "Livre",
       hero: {
         heading: "Livre",
         text: "Découvrez le pouvoir d'une connexion authentique grâce à la thérapie Imago",
@@ -615,6 +625,7 @@ const translations = {
       },
     },
     workshopsPage: {
+      pageTitle: "Ateliers",
       hero: {
         heading: "Ateliers & événements",
         text: "Expériences transformatrices pour renforcer la connexion et générer un changement relationnel durable.",
@@ -692,6 +703,7 @@ const translations = {
       ],
     },
     trainingsPage: {
+      pageTitle: "Formations",
       hero: {
         heading: "Programmes de formation",
         text: "Formations complètes pour thérapeutes et personnes souhaitant maîtriser la méthodologie Imago.",

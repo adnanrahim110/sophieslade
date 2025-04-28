@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { ai_bg, imagorelationships } from "../assets";
 import Hero from "../components/Hero";
 import { useLanguage } from "../components/LanguageContext";
@@ -15,7 +16,10 @@ const AboutImago = () => {
   const { intro, sec3 } = aboutImago;
 
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>{aboutImago.pageTitle} - Sophie Slade</title>
+      </Helmet>
       <Hero pageKey={"aboutImago"} img={ai_bg} />
 
       <section id="learn-more" className="pb-20 pt-32 bg-white">
@@ -101,7 +105,7 @@ const AboutImago = () => {
         </div>
       </section>
       <Reviews />
-    </div>
+    </>
   );
 };
 

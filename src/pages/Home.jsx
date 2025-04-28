@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import { useLanguage } from "../components/LanguageContext";
 
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet-async";
 import { hero_bg } from "../assets";
 import Reviews from "../components/ui/Reviews";
 import Services from "../components/ui/Services";
@@ -16,7 +17,10 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>{home.pageTitle} - Sophie Slade</title>
+      </Helmet>
       <Hero pageKey={"home"} img={hero_bg} />
 
       <section id="learnmore" className="py-20 bg-white">
@@ -41,7 +45,7 @@ const Home = () => {
       <Services />
 
       <Reviews />
-    </div>
+    </>
   );
 };
 
