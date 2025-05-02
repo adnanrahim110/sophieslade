@@ -48,6 +48,26 @@
     color: #fff;
   }
 
+  * ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  * ::-webkit-scrollbar-track {
+    background: #fff;
+    border-left: 1px solid var(--color-neutral-200);
+  }
+
+  * ::-webkit-scrollbar-thumb {
+    background: var(--color-secondary-foreground);
+
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    * {
+      scrollbar-color: var(--color-secondary-foreground) #fff;
+    }
+  }
+
   * {
     @apply box-border;
   }
