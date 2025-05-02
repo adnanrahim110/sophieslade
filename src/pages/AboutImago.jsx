@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ai_bg, imagorelationships } from "../assets";
+import { ai_bg, ai_bg_sm, imagorelationships } from "../assets";
 import Hero from "../components/Hero";
 import { useLanguage } from "../components/LanguageContext";
 import Reviews from "../components/ui/Reviews";
@@ -20,13 +20,13 @@ const AboutImago = () => {
       <Helmet>
         <title>{aboutImago.pageTitle} - Sophie Slade</title>
       </Helmet>
-      <Hero pageKey={"aboutImago"} img={ai_bg} />
+      <Hero pageKey={"aboutImago"} img={ai_bg} img_sm={ai_bg_sm} />
 
-      <section id="learn-more" className="pb-20 pt-32 bg-white">
+      <section className="pb-20 pt-32 bg-white">
         <div className="imago-container">
-          <div className="grid md:grid-cols-12 gap-x-4 gap-y-8">
+          <div className="grid lg:grid-cols-12 gap-x-4 gap-y-8">
             <motion.div
-              className="col-span-5 text-center"
+              className="lg:col-span-5 text-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -49,7 +49,7 @@ const AboutImago = () => {
               </div>
             </motion.div>
             <motion.div
-              className="col-span-7 text-center"
+              className="lg:col-span-7 text-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -72,7 +72,7 @@ const AboutImago = () => {
               </div>
             </motion.div>
             <motion.div
-              className="col-span-7"
+              className="lg:col-span-7"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -93,7 +93,7 @@ const AboutImago = () => {
             </motion.div>
 
             <motion.div
-              className="col-span-5 p-8"
+              className="lg:col-span-5 p-8"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}

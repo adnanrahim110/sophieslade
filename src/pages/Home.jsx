@@ -3,7 +3,7 @@ import { useLanguage } from "../components/LanguageContext";
 
 import { motion } from "motion/react";
 import { Helmet } from "react-helmet-async";
-import { hero_bg } from "../assets";
+import { hero_bg, hero_bg_sm } from "../assets";
 import Reviews from "../components/ui/Reviews";
 import Services from "../components/ui/Services";
 
@@ -21,7 +21,7 @@ const Home = () => {
       <Helmet>
         <title>{home.pageTitle} - Sophie Slade</title>
       </Helmet>
-      <Hero pageKey={"home"} img={hero_bg} />
+      <Hero pageKey={"home"} img={hero_bg} img_sm={hero_bg_sm} />
 
       <section id="learnmore" className="py-20 bg-white">
         <div className="imago-container">

@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "./LanguageContext";
 
-const Hero = ({ pageKey, img }) => {
+const Hero = ({ pageKey, img, img_sm }) => {
   const translations = useLanguage();
   const pageContent = translations[pageKey];
   if (!pageContent || !pageContent.hero) {
@@ -22,7 +22,7 @@ const Hero = ({ pageKey, img }) => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative z-10 pl-5 col-start-1 col-end-auto row-start-1 row-end-auto"
+            className="relative z-10 px-5 lg:pl-5 row-start-1 row-end-auto col-start-1 col-end-auto lg:col-start-1 lg:col-end-auto lg:row-start-1 lg:row-end-auto max-lg:text-center z-[2]"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-imago-700 mb-6">
               {heading}
@@ -31,7 +31,7 @@ const Hero = ({ pageKey, img }) => {
               {subheading}
             </p>
             {actions && (
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex max-lg:items-center max-lg:justify-center flex-row gap-4">
                 {actions.map((action, idx) => (
                   <Link
                     key={action.label}
@@ -49,14 +49,20 @@ const Hero = ({ pageKey, img }) => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative z-0 row-start-1 row-end-auto col-start-1 col-end-3"
+            className="relative z-0 row-start-1 row-end-auto col-start-1 col-end-auto lg:row-start-1 lg:row-end-auto lg:col-start-1 lg:col-end-3"
           >
             <div className="relative rounded-lg overflow-hidden shadow-[0_0_10px_5px_rgba(0,0,0,0.07)]">
               <img
                 src={img}
                 alt="Imago Trainer"
-                className="w-full h-full rounded-lg object-cover"
+                className="hidden md:block w-full h-full rounded-lg object-cover"
               />
+              <img
+                src={img_sm}
+                alt="Imago Trainer"
+                className="block md:hidden w-full h-full rounded-lg object-cover"
+              />
+              <div className="block lg:hidden absolute w-full h-full inset-0 bg-white/90"></div>
               <div className="absolute inset-0 bg-imago-500/10"></div>
             </div>
             <motion.div
@@ -65,7 +71,7 @@ const Hero = ({ pageKey, img }) => {
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
             <motion.div
-              className="absolute -bottom-8 -right-4 w-28 h-28 rounded-full bg-imago-200 opacity-80"
+              className="absolute -bottom-8 -right-4 w-16 h-16 md:w-28 md:h-28 rounded-full bg-imago-200 opacity-80"
               animate={{ y: [0, 10, 0] }}
               transition={{
                 repeat: Infinity,
@@ -79,7 +85,7 @@ const Hero = ({ pageKey, img }) => {
       </div>
       {scrolldown && (
         <motion.div
-          className="absolute top-full left-1/2 transform -translate-x-1/2 -mt-10 z-10 backdrop-blur-xs bg-imago-400/10 py-2 px-4 rounded-md border border-white/60 hover:bg-white hover:border-black/30 transition-all duration-200 ease-in-out"
+          className="hidden lg:block absolute top-full left-1/2 transform -translate-x-1/2 -mt-10 z-10 backdrop-blur-xs bg-imago-400/10 py-2 px-4 rounded-md border border-white/60 hover:bg-white hover:border-black/30 transition-all duration-200 ease-in-out"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
         >

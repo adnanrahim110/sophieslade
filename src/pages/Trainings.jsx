@@ -28,12 +28,12 @@ const Trainings = () => {
               {trainings.map((training, index) => (
                 <motion.div
                   key={index}
-                  className={`bg-imago-50/50 border border-imago-200 rounded-lg shadow-sm hover:shadow-lg hover:border-imago-400 transition-all duration-300 ease-in-out cursor-pointer overflow-hidden h-full ${
+                  className={`bg-imago-50/50 border border-imago-200 rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-0.5 hover:border-imago-400 hover:bg-imago-50 transition-all duration-300 ease-in-out cursor-pointer overflow-hidden h-full ${
                     training.expanded
-                      ? "md:col-span-7"
+                      ? "md:col-span-12 lg:col-span-7"
                       : training.embedLink
-                      ? "md:col-span-5"
-                      : "md:col-span-4"
+                      ? "md:col-span-6 lg:col-span-5"
+                      : "md:col-span-6 lg:col-span-4"
                   }`}
                   initial="hidden"
                   whileInView="visible"
@@ -41,16 +41,35 @@ const Trainings = () => {
                   variants={fadeInUp}
                   transition={{ delay: index * 0.1 }}
                 >
-                  {training.embedLink ? (
-                    <div className="flex flex-col h-full">
-                      <div className="p-6 flex items-center gap-4">
-                        <div className="w-12 h-12 bg-imago-100 rounded-full flex items-center justify-center">
-                          <Users size={24} className="text-imago-600" />
+                  <div className="flex flex-col h-full group">
+                    <div className="p-6 text-sm">
+                      <Link
+                        to={training.link}
+                        className={`${
+                          training.embedLink ? "" : "mb-4"
+                        } flex gap-4 *:transition-all *:duration-300 *:ease-in-out ${
+                          training.expanded || training.embedLink
+                            ? "flex-row items-center"
+                            : " flex-col"
+                        }`}
+                      >
+                        <div className="w-12 h-12 bg-imago-100 rounded-full flex items-center justify-center group-hover:bg-imago-200">
+                          <Users
+                            size={24}
+                            className="text-imago-500 group-hover:text-imago-700 transition-all duration-300 ease-in-out"
+                          />
                         </div>
-                        <h3 className="text-lg line-clamp-1 font-semibold text-imago-700">
+                        <h3 className="text-lg line-clamp-1 font-semibold text-imago-700 hover:text-imago-800 underline underline-offset-2 decoration-transparent hover:decoration-imago-800">
                           {training.title}
                         </h3>
-                      </div>
+                      </Link>
+                      {training.text && (
+                        <p className="text-gray-700 line-clamp-3">
+                          {training.text}
+                        </p>
+                      )}
+                    </div>
+                    {training.embedLink ? (
                       <div className="h-full">
                         <iframe
                           width="100%"
@@ -63,40 +82,8 @@ const Trainings = () => {
                           allowfullscreen
                         ></iframe>
                       </div>
-                      <div className="p-6">
-                        <Link
-                          to={training.link}
-                          className="text-imago-600 font-medium hover:text-imago-700 inline-flex items-center group"
-                        >
-                          {buttonLabel}{" "}
-                          <span className="ml-1 group-hover:translate-x-1.5 transition-all duration-200 ease-linear">
-                            →
-                          </span>
-                        </Link>
-                      </div>
-                    </div>
-                  ) : (
-                    <>
-                      <div className="p-6 text-sm">
-                        <div
-                          className={`mb-4 flex gap-4 ${
-                            training.expanded
-                              ? "flex-row items-center"
-                              : " flex-col"
-                          }`}
-                        >
-                          <div className="w-12 h-12 bg-imago-100 rounded-full flex items-center justify-center">
-                            <Users size={24} className="text-imago-600" />
-                          </div>
-                          <h3 className="text-lg line-clamp-1 font-semibold text-imago-700">
-                            {training.title}
-                          </h3>
-                        </div>
-                        <p className="text-gray-700 line-clamp-3">
-                          {training.text}
-                        </p>
-                      </div>
-                      <div className="p-6 bg-gray-100 border-y border-imago-200">
+                    ) : (
+                      <div className="p-6 bg-gray-100 group-hover:bg-gray-200 transition-all duration-300 ease-in-out border-y border-imago-200">
                         <h4 className="font-semibold mb-3 text-gray-900 text-lg">
                           {training.subtitle}
                         </h4>
@@ -116,19 +103,19 @@ const Trainings = () => {
                           ))}
                         </ul>
                       </div>
-                      <div className="p-6">
-                        <Link
-                          to={training.link}
-                          className="text-imago-600 font-medium hover:text-imago-700 inline-flex items-center group"
-                        >
-                          {buttonLabel}{" "}
-                          <span className="ml-1 group-hover:translate-x-1.5 transition-all duration-200 ease-linear">
-                            →
-                          </span>
-                        </Link>
-                      </div>
-                    </>
-                  )}
+                    )}
+                    <div className="p-6">
+                      <Link
+                        to={training.link}
+                        className="text-imago-600 font-medium hover:text-imago-700 inline-flex items-center group"
+                      >
+                        {buttonLabel}{" "}
+                        <span className="ml-1 group-hover:translate-x-1.5 transition-all duration-200 ease-linear">
+                          →
+                        </span>
+                      </Link>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>

@@ -13,9 +13,10 @@ const WorkShops = () => {
   };
 
   const { workshopsPage } = useLanguage();
-  const { workshopTypes, buttonLabel, buttonLabel2 } = workshopsPage;
+  const { workshopTypes, buttonLabel, buttonLabel2, buttonLabel3 } =
+    workshopsPage;
 
-  const [selectedId, setSelectedId] = useState(null);
+  const [selectedId, setSelectedId] = useState(1);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -200,15 +201,15 @@ const WorkShops = () => {
                           <div className="flex flex-col sm:flex-row gap-3">
                             {item.expired ? (
                               <button disabled className="btn-primary dis">
-                                Expired
+                                {item.regText}
                               </button>
                             ) : (
                               <a href={item.regLink} className="btn-primary">
-                                Register Now
+                                {item.regText}
                               </a>
                             )}
                             <Link className="btn-secondary">
-                              More information
+                              {buttonLabel3}
                             </Link>
                           </div>
                         </div>

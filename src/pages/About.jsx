@@ -30,16 +30,16 @@ const About = () => {
         <section className="py-20 bg-white">
           <div className="imago-container">
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <div className="md:col-span-5">
+              <div className="lg:col-span-5 max-lg:row-start-2">
                 <img src={Sophie_Slade} className="rounded-lg" alt="Sophie" />
               </div>
-              <div className="col-span-6">
+              <div className="lg:col-span-6 max-lg:row-start-1">
                 {bio.map((item, idx) => (
                   <div key={idx} className="not-last:mb-12">
                     <h2 className="text-4xl font-bold text-imago-700 mb-6">
@@ -59,13 +59,13 @@ const About = () => {
         <section className="py-16 bg-imago-50">
           <div className="imago-container">
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <div className="col-span-6">
+              <div className="lg:col-span-6">
                 <div className="not-last:mb-12">
                   <h2 className="text-4xl font-bold text-imago-700 mb-6">
                     {heading}
@@ -77,7 +77,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className="md:col-span-6 relative rounded-xl overflow-hidden bg-neutral-200 p-2 pb-8">
+              <div className="lg:col-span-6 relative rounded-xl overflow-hidden bg-neutral-200 p-2 pb-8">
                 <img
                   src={Sophie_in_Africa}
                   className="rounded-lg"
@@ -87,9 +87,6 @@ const About = () => {
                   {imgdesc}
                 </span>
               </div>
-              {/* <div className="md:col-span-12">
-              <img src={fac_meeting} alt="" />
-            </div> */}
             </motion.div>
           </div>
         </section>

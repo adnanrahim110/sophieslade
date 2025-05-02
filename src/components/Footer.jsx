@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className="bg-imago-700 text-white pt-12 pb-6">
       <div className="imago-container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="space-y-4">
             <h2 className="text-2xl font-serif font-bold">Sophie Slade</h2>
             <p className="text-imago-100">{text}</p>

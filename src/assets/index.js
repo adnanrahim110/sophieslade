@@ -1,8 +1,10 @@
 export { default as ai_bg } from './images/ai_bg.png';
+export { default as ai_bg_sm } from './images/ai_bg_sm.jpg';
 export { default as author } from './images/author.jpg';
 export { default as bookcover } from './images/bookcover.jpg';
 export { default as fac_meeting } from './images/fac-meeting.jpg';
 export { default as france } from './images/france.png';
+export { default as hero_bg_sm } from './images/hero-bg-sm.jpg';
 export { default as hero_bg } from './images/hero-bg.jpg';
 export { default as imagorelationships } from './images/imagorelationships.jpg';
 export { default as sophie_and_Harvilleed } from './images/sophie-and-Harvilleed.jpg';

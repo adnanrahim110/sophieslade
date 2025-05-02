@@ -26,7 +26,7 @@ const Books = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeInUp}
-                className="col-span-7"
+                className="md:col-span-7"
               >
                 <h2 className="text-3xl font-bold text-imago-700 mb-3">
                   {bookSec.heading}
@@ -52,7 +52,7 @@ const Books = () => {
                 viewport={{ once: true }}
                 variants={fadeInUp}
                 transition={{ delay: 0.2 }}
-                className="relative z-[1] col-span-5"
+                className="relative z-[1] md:col-span-5"
               >
                 <img
                   src={bookcover}

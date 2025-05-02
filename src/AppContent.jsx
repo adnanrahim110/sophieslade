@@ -10,7 +10,9 @@ import AboutImago from "./pages/AboutImago";
 import Books from "./pages/Books";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import Training from "./pages/Training";
 import Trainings from "./pages/Trainings";
+import WorkShop from "./pages/WorkShop";
 import WorkShops from "./pages/WorkShops";
 
 const AppContent = () => {
@@ -35,10 +37,11 @@ const AppContent = () => {
               <Route path="/about-imago" element={<AboutImago />} />
               <Route path="/books" element={<Books />} />
               <Route path="/trainings" element={<Trainings />} />
-              <Route path="/trainings/:type" element={<Trainings />} />
+              <Route path="/trainings/:trainingType" element={<Training />} />
               <Route path="/workshops" element={<WorkShops />} />
-              <Route path="/workshops/:type" element={<WorkShops />} />
+              <Route path="/workshops/:workshopType" element={<WorkShop />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/404" element={<NotFound />} />
             </Routes>
           </motion.main>
           <Footer />

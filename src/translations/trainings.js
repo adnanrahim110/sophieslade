@@ -1,0 +1,140 @@
+export const trainingsPage = {
+  en: {
+    pageTitle: "Trainings",
+    hero: {
+      heading: "Training Programs",
+      text: "Comprehensive training programs for therapists and individuals interested in Imago methodology.",
+    },
+    buttonLabel: "Learn more",
+    trainings: [
+      {
+        title: "Clinical Training Program",
+        text: "This training in couple therapy for psychotherapists, psychologists, psychiatrists, marriage and  family therapists will transform your work with your couple clients, help you to help them work through their conflicts and connect more deeply and safely with each other.",
+        subtitle: "features",
+        features: [
+          "Clinical Track open to psychotherapists, psychologists, couple and family therapists",
+          "Clinical Track open to psychotherapists, psychologists, couple and family therapists",
+          "Clinical Track open to psychotherapists, psychologists, couple and family therapists",
+        ],
+        link: "/trainings/clinical-training-program",
+      },
+      {
+        title: "Imago Professional Facilitator Training",
+        text: "Imago skills and understanding of relationship dynamics are applicable in so many diverse fields. Wherever relationships are involved - at work, at home, at play -relationship challenges can arise.",
+        subtitle: "features",
+        features: [
+          "Working with Individuals in the Relational Paradigm",
+          "Working with Individuals in the Relational Paradigm",
+          "Working with Individuals in the Relational Paradigm",
+        ],
+        link: "/trainings/imago-professional-facilitator-training",
+      },
+      {
+        title: '"Getting the Love You Want" Workshop Presenter Training',
+        text: 'The "Getting the Love You Want" workshop has helped thousands of couples around the world over the past 20 plus years.  This 12-day training to be accredited to present this amazing, transformational workshop takes Imago therapists to a whole other level of understanding of Imago theory and practice.',
+        subtitle: "features",
+        features: [
+          "It helps you to grow yourself as a presenter",
+          "It helps you to grow yourself as a presenter",
+          "It helps you to grow yourself as a presenter",
+        ],
+        link: "/trainings/workshop-presenter-training",
+      },
+      {
+        title: "Training Videos",
+        embedLink: "https://www.youtube.com/embed/TEdza5Dy8Wk",
+        link: "/trainings/training-videos",
+      },
+      {
+        title: "Advanced Trainings",
+        expanded: true,
+        text: "These courses are generally offered over 3 days in person, or totalling 24 hours on-line including some self-study, but some can be adapted to shorter or longer presentations. Price is usually US$650 or equivalent per course.",
+        subtitle: "Trainings list",
+        features: [
+          "The Relational Self / Working with Individuals in the Imago Paradigm ",
+          "Brilliant at the Basics",
+          "Giving and Receiving Love",
+          "Sexuality, Sensuality and Imago",
+          "Growing in Competence in Imago",
+          "Characterological Growth",
+          "From Despair to Repair",
+          "The Journey of Change",
+          "Imago Therapy through the Developmental Lens",
+          "Presentational Skills Training",
+          "“Getting the Love You Want” Workshop Presenters' Training",
+          "“Keeping the Love You Find” Workshop Presenters Training",
+        ],
+        link: "/trainings/advanced-trainings",
+      },
+    ],
+  },
+  fr: {
+    pageTitle: "Formations",
+    hero: {
+      heading: "Programmes de formation",
+      text: "Formations complètes pour thérapeutes et personnes souhaitant maîtriser la méthodologie Imago.",
+    },
+    buttonLabel: "En savoir plus",
+    trainings: [
+      {
+        title: "Formation clinique",
+        text: "Destinée aux psychothérapeutes, psychologues et thérapeutes de couple, cette formation transformera votre accompagnement des conflits et renforcera la connexion de vos clients.",
+        subtitle: "Caractéristiques",
+        features: [
+          "Volet clinique pour thérapeutes de couple et famille",
+          "Techniques avancées d'écoute et de dialogue",
+          "Supervisions et cas pratiques",
+        ],
+        link: "/trainings/clinical-training-program",
+      },
+      {
+        title: "Formation de facilitateurs professionnels Imago",
+        text: "Apprenez à animer ateliers et groupes en appliquant la théorie relationnelle Imago dans divers contextes (couple, travail, communauté).",
+        subtitle: "Caractéristiques",
+        features: [
+          "Approche relationnelle pour individus",
+          "Dynamique de groupe et supervision",
+          "Outils pratiques pour la facilitation",
+        ],
+        link: "/trainings/imago-professional-facilitator-training",
+      },
+      {
+        title:
+          "Formation « Getting the Love You Want » – Présentateur·rice d’atelier",
+        text: "Formation de 12 jours pour devenir animateur·rice certifié·e du célèbre atelier « Getting the Love You Want ».",
+        subtitle: "Caractéristiques",
+        features: [
+          "Conception et gestion d’un atelier",
+          "Techniques avancées d’animation",
+          "Certification officielle Imago",
+        ],
+        link: "/trainings/workshop-presenter-training",
+      },
+      {
+        title: "Vidéos de formation",
+        embedLink: "https://www.youtube.com/embed/TEdza5Dy8Wk",
+        link: "/trainings/training-videos",
+      },
+      {
+        title: "Formations avancées",
+        expanded: true,
+        text: "Cours intensifs de 24 h (en ligne ou présentiel), modulables selon vos besoins. Tarif standard : 650 US$ ou équivalent.",
+        subtitle: "Liste des formations",
+        features: [
+          "Le soi relationnel",
+          "Fondamentaux du dialogue",
+          "Donner et recevoir l'amour",
+          "Sexualité et sensualité Imago",
+          "Croissance de caractère",
+          "Du désespoir à la réparation",
+          "Parcours du changement",
+          "Therapie Imago pour enfants",
+          "Techniques de présentation",
+          '"Getting the Love You Want" animateur·rice',
+          '"Keeping the Love You Find" animateur·rice',
+        ],
+        link: "/trainings/advanced-trainings",
+      },
+    ],
+  },
+}
